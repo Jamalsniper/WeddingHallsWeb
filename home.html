@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة حفلات - الصفحة الرئيسية</title>
+    <script>
+      (function() {
+        try {
+          var allThemes = ['theme-light','theme-dark','theme-blue','theme-green','theme-purpleblue','theme-redpink'];
+          var saved = localStorage.getItem('selectedTheme') || 'theme-light';
+          var root = document.documentElement;
+          allThemes.forEach(function(t){ root.classList.remove(t); });
+          root.classList.add(saved);
+        } catch(e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gamal.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- رأس الصفحة -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="home.html" class="logo">
+            <i class="fas fa-glass-cheers"></i>
+            منصة حفلات
+          </a>
+
+          <nav>
+            <ul>
+              <li><a href="home.html" class="active">الرئيسية</a></li>
+              <li><a href="halls.html">القاعات</a></li>
+              <li><a href="teams.html">الفرق</a></li>
+              <li><a href="about.html">من نحن</a></li>
+              <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+          </nav>
+          <div class="theme-switcher">
+          <div class="theme-circle" data-theme="theme-purpleblue" title="بنفسجي/أزرق" style="background: linear-gradient(135deg, #8e2de2, #4a00e0);"></div>
+          <div class="theme-circle" data-theme="theme-redpink" title="أحمر/وردي" style="background: linear-gradient(135deg, #ff512f, #dd2476);"></div>
+        </div>
+          <div class="auth-buttons">
+            <button
+              type="button"
+              class="btn btn-outline"
+              onclick="window.location.href='index.html'"
+            >
+              تسجيل الدخول
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="window.location.href='index.html'"
+            >
+              إنشاء حساب
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- قسم البطل -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>احجز قاعة حفلاتك أو فريق الترفيه المفضل</h1>
+          <p>
+            اكتشف أفضل القاعات والفرق الموسيقية لحفلاتك وأعراسك في مكان واحد
+          </p>
+
+          <div class="search-box">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="ابحث حسب المدينة، التاريخ، الميزانية..."
+            />
+            <button class="search-btn">ابحث الآن</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم القاعات -->
+    <section id="halls">
+      <div class="container">
+        <div class="section-header">
+          <h2>القاعات المتاحة</h2>
+          <p>
+            اختر من بين مجموعة متنوعة من القاعات المناسبة لجميع أنواع المناسبات
+          </p>
+        </div>
+
+        
+
+        <div class="cards-container" id="hallsContainer">
+          <!-- سيتم ملء هذا القسم بالبيانات من JavaScript -->
+        </div>
+
+        <div style="text-align: center; margin-top: 40px">
+          <a href="halls.html" class="btn btn-primary">عرض جميع القاعات</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الفرق -->
+    <section id="teams">
+      <div class="container">
+        <div class="section-header">
+          <h2>الفرق الموسيقية</h2>
+          <p>
+            اختر من بين أفضل الفرق الموسيقية والترفيهية لإضفاء البهجة على حفلاتك
+          </p>
+        </div>
+
+        
+
+        <div class="cards-container" id="teamsContainer">
+          <!-- سيتم ملء هذا القسم بالبيانات من JavaScript -->
+        </div>
+
+        <div style="text-align: center; margin-top: 40px">
+          <a href="teams.html" class="btn btn-primary">عرض جميع الفرق</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم المعرض -->
+    <section id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <h2>المعرض</h2>
+          <p>لقطات مميزة من القاعات والفعاليات السابقة</p>
+        </div>
+        <div class="gallery-grid">
+          <div><img loading="lazy" src="img/gallery-1.jpg" alt="قاعة أفراح" /></div>
+          <div><img loading="lazy" src="img/gallery-2.jpg" alt="تجهيزات إضاءة" /></div>
+          <div><img loading="lazy" src="img/gallery-3.jpg" alt="ديكور حفلات" /></div>
+          <div><img loading="lazy" src="img/gallery-4.jpg" alt="ترتيب الطاولات" /></div>
+          <div><img loading="lazy" src="img/gallery-5.jpg" alt="حفلة موسيقية" /></div>
+          <div><img loading="lazy" src="img/gallery-6.jpg" alt="قاعة مزينة" /></div>
+          <div><img loading="lazy" src="img/gallery-7.jpg" alt="رقص وزفاف" /></div>
+          <div><img loading="lazy" src="img/gallery-8.jpg" alt="إضاءة وإبهار" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>منصة حفلات</h3>
+            <p>
+              منصة متكاملة لخدمات حجز القاعات والفرق الموسيقية لحفلاتك ومناسباتك
+              الخاصة. نوفر لك أفضل الخيارات بأفضل الأسعار.
+            </p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-snapchat-ghost"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>روابط سريعة</h3>
+            <ul class="footer-links">
+              <li><a href="home.html">الرئيسية</a></li>
+              <li><a href="halls.html">القاعات</a></li>
+              <li><a href="teams.html">الفرق</a></li>
+              <li><a href="booking.html">نموذج الحجز</a></li>
+              <li><a href="about.html">من نحن</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>معلومات إضافية</h3>
+            <ul class="footer-links">
+              <li><a href="faq.html">الأسئلة الشائعة</a></li>
+              <li><a href="terms.html">الشروط والأحكام</a></li>
+              <li><a href="privacy.html">سياسة الخصوصية</a></li>
+              <li><a href="cancellation.html">سياسة الإلغاء</a></li>
+              <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>اشترك في نشرتنا</h3>
+            <p>اشترك في نشرتنا البريدية لتصلك آخر العروض والتخفيضات.</p>
+            <div class="subscribe-form">
+              <input type="email" placeholder="بريدك الإلكتروني" />
+              <button class="btn btn-primary">اشترك</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>جميع الحقوق محفوظة &copy; 2023 منصة حفلات</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/home.js"></script>
+    <script>
+      // ربط احتياطي لحدث النقر على دوائر الثيم لضمان العمل حتى لو لم تُستدعَ التهيئة الأساسية
+      (function() {
+        var bind = function(){
+          var circles = document.querySelectorAll('.theme-circle[data-theme]');
+          if (!circles.length) return;
+          var themes = ['theme-light','theme-dark','theme-blue','theme-green','theme-purpleblue','theme-redpink'];
+          circles.forEach(function(c){
+            if (c.__themeBound) return; // منع التكرار
+            c.__themeBound = true;
+            c.addEventListener('click', function(){
+              var theme = c.getAttribute('data-theme');
+              try { localStorage.setItem('selectedTheme', theme); } catch(e) {}
+              themes.forEach(function(t){ document.body.classList.remove(t); document.documentElement.classList.remove(t); });
+              document.documentElement.classList.add(theme);
+            });
+          });
+        };
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', bind);
+        } else { bind(); }
+        // استدعِ مبدّل الثيمات الأصلي إن كان متاحاً
+        if (typeof setupThemeSwitcher === 'function') {
+          try { setupThemeSwitcher(); } catch(e) {}
+        }
+      })();
+    </script>
+  </body>
+</html>
